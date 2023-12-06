@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/media-query.css">
+</head>
+<body>
+    <main id="container">
+        <section id="login">
+            <div id="imagem">
+            
+            </div>
+            <div id="formulario">
+                <h1>Login</h1>
+
+                <p>Seja bem-vindo(a) novamente. Faça login para acessar sua conta e poder fazer as configurações no seu ambiente.</p>
+
+                <form action="login.php" method="post" autocomplete="on">
+                    <div class="dados">
+                        <label for="iusuario"><i id="usuario" class="material-icons">person</i></label>
+                        <input type="text" name="usuario" id="iusuario" required placeholder="seu e-mail" autocomplete="username">
+                    </div>
+                    <div class="dados">
+                        <label for="isenha"><i id="senha" class="material-icons">vpn_key</i></label>
+                        <input type="password" name="senha" id="isenha" required maxlength="15" placeholder="sua senha" autocomplete="current-password">
+                    </div>
+
+                    <p>
+                        <input id="entrar" class="botoes" type="submit" value="Entrar">
+                        <input id="esqueceu" class="botoes" type="button" value="Esquici a senha">
+                    </p>
+                </form>
+        </div>
+        </section>
+    </main>
+</body>
+</html>
