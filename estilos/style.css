@@ -79,7 +79,6 @@ div.dados > label {
 
 div.dados > i {
     color: white;
-    
     font-size: 2em;
     width: 40px;
     padding: 5px;
@@ -116,7 +115,6 @@ form > input[type=submit] {
 
 form > input[type=submit]:hover {
     background-color: #9c3900;
-    
 }
 
 form > a.botao {
