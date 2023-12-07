@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-/* gradiente #8B5FFF #888CFF*/
+/* cores #8B5FFF #888CFF #BFA893 */
 
 * {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -18,19 +18,20 @@ body, html {
 main {
     height: 100vh;
     width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    position: relative;
 }
 
 section#login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    overflow: hidden;
     height: 500px;
     width: 250px;
     background-color: white;
     border-radius: 20px;
-    overflow: hidden;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.445);
+    transform: translate(-50%, -50%);
     transition: width .5s, height .5s;
     transition-timing-function: ease;
 }
@@ -51,36 +52,56 @@ div#formulario {
     padding: 10px;
 }
 
-#formulario > h1 {
+div#formulario > h1 {
     text-align: center;
-    padding-bottom: 10px;
+    margin-bottom: 10px;
 }
 
-#formulario > p {
+div#formulario > p {
     text-align: justify;
-    line-height: 1.5em;
+    font-size: 0.8em;
 }
 
-.dados {
-    display: flex;
+form > div.dados {
+    display: block;
     background-color: #733E1F;
-    width: 97%;
-    height: 34px;
+    width: 100%;
+    height: 40px;
     color: white;
+    margin: 5px 0px;
+    border-radius: 8px;
+    border: 2px solid #733E1F;
+}
+
+div.dados > label {
+    display: none;
+}
+
+div.dados > i {
+    color: white;
+    
+    font-size: 2em;
+    width: 40px;
     padding: 5px;
-    margin-bottom: 5px;
-    border-radius: 5px;
 }
 
-.dados > input {
-    width: 90%;
-    height: 25px;
+div.dados > input {
+    width: calc(100% - 45px);
+    height: 100%;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     background-color: #BFA893;
+    font-size: 1em;
+    padding: 4px;
+    transform: translateY(-13px); /*qnd tiver transform coloque sempre na ultima linha*/
 }
 
-#entrar {
+div.dados > input:focus-within {
+    background-color: white;
+}
+
+form > input[type=submit] {
+    display: block;
     background-color: #A64914; 
     width: 100%;
     height: 40px;
@@ -90,21 +111,33 @@ div#formulario {
     color: white;
     font-size: 1em;
     font-weight: bold;
+    cursor: pointer;
 }
 
-#esqueceu {
-    background-color: white;
-    border-radius: 5px;
-    border: 1px solid #A64914;
+form > input[type=submit]:hover {
+    background-color: #9c3900;
+    
+}
+
+form > a.botao {
+    display: block;
+    text-align: center;
+    font-size: 1em;
     width: 100%;
     height: 40px;
+    padding-top: 5px;
+    margin-top: 5px;
+    background-color: white;
+    color: #79340d;
+    border: 1px solid #A64914;
+    border-radius: 8px;
+    text-decoration: none;
 }
 
-#entrar:hover, #esqueceu:hover {
-    background-color: #BFA893;
-    border: none;
+form > a.botao:hover {
+    background-color: #a64914a6;
 }
 
-.botoes:hover {
-    cursor: pointer;
+form > a.botao > i {
+    font-size: 0.8em;
 }
